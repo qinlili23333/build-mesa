@@ -17,8 +17,10 @@ rem *** architectures ***
 
 if "%PROCESSOR_ARCHITECTURE%" equ "x86" (
   set HOST_ARCH=x86
+  set CL=/arch:AVX2
 ) else if "%PROCESSOR_ARCHITECTURE%" equ "AMD64" (
   set HOST_ARCH=x64
+  set CL=/arch:AVX2
 ) else if "%PROCESSOR_ARCHITECTURE%" equ "ARM64" (
   set HOST_ARCH=arm64
 ) else (
