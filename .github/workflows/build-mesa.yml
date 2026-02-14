@@ -8,10 +8,10 @@ on:
 
 jobs:
   build:
-    runs-on: windows-2025
+    runs-on: windows-2025-vs2026
     strategy:
       matrix:
-        arch: [x86, x64, arm64]
+        arch: [x86, x64]
 
     outputs:
       MESA_VERSION: ${{ steps.build.outputs.MESA_VERSION }}
